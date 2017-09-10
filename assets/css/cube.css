@@ -100,7 +100,7 @@
 	-webkit-appearance: push-button;
 }
 
-@keyframes animateright{
+@keyframes animate-right{
 	0%{
 		transform: translateZ(-100px) rotateY(0deg);
 	}
@@ -118,7 +118,7 @@
 	}
 }
 
-@keyframes animateleft{
+@keyframes animate-left{
 	0%{
 		transform: translateZ(-100px) rotateY(0deg);
 	}
@@ -156,26 +156,79 @@
 
 @keyframes animate-down{
 	0%{
-		transform: translateZ(-100px) rotateZ(0deg) rotateY(0deg);
+		transform: translateZ(-100px) rotateX(0deg);
 	}
-	/*25%{
-		transform: translateZ(-100px) rotateX(0deg) rotateY(90deg);
-	}*/
+	25%{
+		transform: translateZ(-100px) rotateX(-90deg);
+	}
 	50%{
-		transform: translateZ(-100px) rotateZ(180deg) rotateY(180deg);
+		transform: translateZ(-100px) rotateX(-180deg);
 	}
-	/*75%{
-		transform: translateZ(-100px) rotateX(270deg) rotateY(270deg);
-	}*/
+	75%{
+		transform: translateZ(-100px) rotateX(-270deg);
+	}
 	100%{
-		transform: translateZ(-100px) rotateZ(360deg) rotateY(360deg);
+		transform: translateZ(-100px) rotateX(-360deg) ;
 	}
 }
 
 #cube.left{
-	animation: animate-down 5s linear infinite;
+	animation: animate-left 5s linear infinite;
 }
 
 #cube.right{
-	animation: animateright 5s linear infinite;
+	animation: animate-right 5s linear infinite;
 }
+
+#cube.up{
+	animation: animate-up 5s linear infinite;
+}
+
+#cube.down{
+	animation: animate-down 5s linear infinite;
+}
+
+@keyframes animate-y-x{
+	0%{
+		transform: translateZ(-100px) rotateY(360deg) rotateX(0deg);
+	}
+	25%{
+		transform: translateZ(-100px) rotateY(270deg) rotateX(90deg);
+	}
+	50%{
+		transform: translateZ(-100px) rotateY(180deg) rotateX(180deg);
+	}
+	75%{
+		transform: translateZ(-100px) rotateY(90deg) rotateX(270deg);
+	}
+	100%{
+		transform: translateZ(-100px) rotateY(0deg) rotateX(360deg);
+	}
+}
+
+@keyframes animate-x-y{
+	0%{
+		transform: translateZ(-100px) rotateX(360deg) rotateY(0deg);
+	}
+	25%{
+		transform: translateZ(-100px) rotateX(270deg) rotateY(90deg);
+	}
+	50%{
+		transform: translateZ(-100px) rotateX(180deg) rotateY(180deg);
+	}
+	75%{
+		transform: translateZ(-100px) rotateX(90deg) rotateY(270deg);
+	}
+	100%{
+		transform: translateZ(-100px) rotateX(0deg) rotateY(360deg);
+	}
+}
+
+#cube.x-y{
+	animation: animate-x-y 5s linear infinite;
+}
+
+#cube.y-x{
+	animation: animate-y-x 5s linear infinite;
+}
+

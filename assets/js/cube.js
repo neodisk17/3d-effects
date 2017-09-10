@@ -25,7 +25,23 @@ $(document).ready(function(){
 				$("#cube").addClass("showright")
 				break;
 			case "animate-left":
-				$("#cube").addClass("left")
+				$("#cube").addClass("left");
+				break;
+			case "animate-right":
+				$("#cube").addClass("right");
+				break;
+			case "animate-up":
+				$("#cube").addClass("up");
+				break;
+			case "animate-down":
+				$("#cube").addClass("down");
+				break;
+			case "animate-x-y":
+				$("#cube").addClass("x-y");
+				break;
+			case "animate-y-x":
+				$("#cube").addClass("y-x");
+				break;
 		}
 	})
 })
