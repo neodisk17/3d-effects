@@ -1,0 +1,55 @@
+.box{
+	background-color: #61ab20;
+	margin: 0 auto;
+	width: 500px;
+	height: 300px;
+	position: relative;
+	box-shadow: inset 0 0 3px #000;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.brick{
+	position: relative;
+	left: 50%;
+	top: 40%;
+	display: block;
+	overflow: hidden;
+	background-color: #61ab20;
+	margin: 0 auto;
+	width: 500px;
+	height: 300px;
+	position: relative;
+	box-shadow: inset 0 0 3px #000;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+b.ball{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #3b4ba3;
+	border-radius:50%;
+	box-shadow: inset -5px -5px 40px rgba(0,0,0,0.6),15px 15px 2px rgba(0,0,0,0.04);
+	position: absolute;
+	-webkit-animation:moveX 3s linear 0s infinite alternate, moveY 3.5s linear infinite alternate;
+}
+
+@keyframes moveX{
+	from {
+		left:0;
+	}
+	to{
+		left: 480px;
+	}
+}
+
+@keyframes moveY{
+	from{
+		top: 0;
+	}
+	to{
+		top: 280px;
+	}
+}

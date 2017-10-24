@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/css/normal.css">
+</head>
+<body>
+<div class="nav">
+	<ul>
+		<li>Home</li>
+		<li>ABout Us</li>
+		<li>COntact Us</li>
+		<li style="float: right;">Login</li>
+		<li style="float: right;">Register</li>
+	</ul>
+</div>
+
+<div id="slideshow">
+	<div class="slides">
+		<img class="" src="http://via.placeholder.com/650x150">
+		<div class="caption">Slide 1</div>	
+	</div>
+
+	<div class="slides">
+		<img  src="http://via.placeholder.com/650x150">
+		<div class="caption">Slide 2</div>	
+	</div>
+
+	<div class="slides">
+		<img  src="http://via.placeholder.com/650x150">
+		<div class="caption">Slide 3</div>	
+	</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+	var slideIndex=0;
+	carousel();
+
+	function carousel() {
+	var x=document.getElementsByClassName("slides");
+
+	for(var i=0;i<x.length;i++){
+		x[i].style.display="none";
+	}
+
+	slideIndex++;
+	if(slideIndex>x.length){
+		slideIndex=1;
+	}
+		x[slideIndex-1].style.display="block";
+		setTimeout(carousel,2000);
+	}
+	
+	
+
+</script>
+
+</html>
